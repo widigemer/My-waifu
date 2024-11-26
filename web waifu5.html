@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Sederhana</title>
+    <style>
+        /* Reset style awal browser untuk memastikan semuanya dimulai dengan kondisi yang sama */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Atur background seluruh website */
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/1278265767921582142/1298867187808731227/88f623c4d64032c81727b2a8bf7513e0.jpg?ex=671b1fd5&is=6719ce55&hm=1c5504f08e41ee22d1ed967ae0a01c83ffabb6ddf999fd7550695b4afbf4b7e1&');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        /* Atur style header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Warna hijau untuk teks "Ini adalah list waifu aku" */
+        header h1.green-text {
+            color: green;
+        }
+
+        /* Atur style section */
+        section {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #fff; /* Merubah warna h1 agar sesuai dengan tema */
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #fff; /* Merubah warna li agar sesuai dengan tema */
+        }
+
+        .rainbow-text {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Atur style video waifu dan loli */
+        .video-container {
+            display: flex;
+            justify-content: center; /* Pusatkan video di dalam kontainer */
+            margin-top: 20px;
+            flex-wrap: wrap; /* Membuat video tetap rapi saat responsif */
+        }
+
+        .video {
+            text-align: center;
+            margin: 10px; /* Jarak antar video */
+        }
+
+        .video video {
+            width: 300px; /* Lebar video */
+            height: auto; /* Tinggi akan menyesuaikan secara otomatis berdasarkan aspek rasio */
+            border-radius: 5px; /* Sudut video membulat */
+        }
+
+        /* Atur style tombol WhatsApp */
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #20b358;
+        }
+
+        /* Atur style footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+</style>
+</section>
+    <footer>
+        <p class="green-text">Ini adalah list waifu dan loli aku</p>
+    </footer>
+
+    <section>
+        <h1>Daftar Waifu</h1>
+        <ul>
+            <li class="rainbow-text">°Hoshino (utama)°</li>
+            <li>°Celia°</li>
+            <li>°Hutao°</li>
+            <li>°Furina°</li>
+        </ul>
+        <h1>Daftar Loli</h1>
+        <ul>
+            <li class="rainbow-text">°Chino (utama)°</li>
+            <li>°Ibuki°</li>
+            <li>°Kokona°</li>
+            <li>°Nahida°</li>
+        </ul>
+
+        <h1>Video Waifu</h1>
+<div class="video-container">
+    <div class="video waifu">
+        <iframe width="300" height="169" src="https://www.youtube.com/embed/3znTrmzaMak" frameborder="0" allowfullscreen></iframe>
+        <p>Hoshino</p>
+    </div>
+</div>
+            <div class="video-container">
+    <div class="video waifu">
+        <iframe width="300" height="169" src="https://www.youtube.com/embed/TgxxRiNnlIg" frameborder="0" allowfullscreen></iframe>
+        <p>Celia</p>
+    </div>
+</div>
+      
+      <div class="video-container">
+    <div class="video waifu">
+        <iframe width="300" height="169" src="https://www.youtube.com/embed/vRj3YbsVTPc" frameborder="0" allowfullscreen></iframe>
+        <p>Hu Tao</p>
+    </div>
+</div>
+      
+      <div class="video-container">
+    <div class="video waifu">
+        <iframe width="300" height="169" src="https://www.youtube.com/embed/EN79SfbcvIE" frameborder="0" allowfullscreen></iframe>
+        <p>Furina</p>
+    </div>
+</div>
+        
+        <script>
+    const video1 = document.getElementById('video1');
+    const video2 = document.getElementById('video2');
+
+    function stopOtherVideos(currentVideo) {
+        if (currentVideo === video1) {
+            video2.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        } else {
+            video1.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+    }
+
+    window.addEventListener('message', function (event) {
+        const data = JSON.parse(event.data);
+        if (data.event === 'onStateChange') {
+            if (data.info === 1) {
+                stopOtherVideos(event.source === video1.contentWindow ? video1 : video2);
+            }
+        }
+    });
+</script>
+
+        <h1>Video Loli</h1>
+<div class="video-container">
+    <div class="video loli">
+        <iframe width="300" height="169" src="https://www.youtube.com/embed/f5zfa5pIpG4" frameborder="0" allowfullscreen></iframe>
+        <p>Chino kaffu</p>
+    </div>
+</div>
+            <div class="video loli">
+    <iframe width="300" height="169" src="https://www.youtube.com/embed/MCVH5TpHFew" frameborder="0" allowfullscreen></iframe>
+    <p>Ibuki</p>
+</div>
+      
+      <div class="video loli">
+    <iframe width="300" height="169" src="https://www.youtube.com/embed/54QjFUr3bYA" frameborder="0" allowfullscreen></iframe>
+    <p>Kokona</p>
+</div>
+      
+      <div class="video loli">
+    <iframe width="300" height="169" src="https://www.youtube.com/embed/LcTFj1LSuIg" frameborder="0" allowfullscreen></iframe>
+    <p>Nahida</p>
+</div>
+        
+        <script>
+    const video1 = document.getElementById('video1');
+    const video2 = document.getElementById('video2');
+
+    function stopOtherVideos(currentVideo) {
+        if (currentVideo === video1) {
+            video2.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        } else {
+            video1.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+    }
+
+    window.addEventListener('message', function (event) {
+        const data = JSON.parse(event.data);
+        if (data.event === 'onStateChange') {
+            if (data.info === 1) {
+                stopOtherVideos(event.source === video1.contentWindow ? video1 : video2);
+            }
+        }
+    });
+</script>
+
+        <!-- Tombol WhatsApp -->
+        <h1>Hubungi Admin</h1>
+<a href="https://wa.me/6283893312612" class="whatsapp-button" target="_blank">
+    <img src="https://media.discordapp.net/attachments/1278265767921582142/1298697778985304177/1729704050838.jpg?ex=671bd38f&is=671a820f&hm=361aa5ac97a1f9205a448915867cd2426d6f82debdd06e002402d721f91f995a&" alt="gambar wa">
+</a>
+
+<style>
+    .whatsapp-button {
+        display: flex;
+        justify-content: center; /* Posisikan tombol di tengah secara horizontal */
+        margin-top: 20px; /* Spasi atas */
+    }
+
+    .whatsapp-button img {
+        width: 50px; /* Atur ukuran sesuai kebutuhan */
+        height: 50px; /* Tinggi gambar */
+        border-radius: 10px; /* Biar pojokan gambarnya rounded */
+        object-fit: cover; /* Menyesuaikan gambar tanpa merusak rasio */
+    }
+</style>
+</head>
+<body>
+
+<section>
+    <p>Klik untuk melihat waifu 2 nya</p>
+    <a href="web waifu2.html" class="pindah-button">balik ke waifu 2</a>
+    <p>Klik untuk melihat waifu 4 nya</p>
+    <a href="web waifu4.html" class="pindah-button">pergi ke waifu 4</a>
+</section>
+</section>
+
+    <footer>
+        <p>&copy; Semua waifu/loli Dilindungi oleh para sensei</p>
+    </footer>
+
+    <script>
+        function playaudio(id) {
+            // Ambil semua elemen audio
+            var allAudios = document.getElementsByTagName('audio');
+
+            // Hentikan semua audio yang sedang diputar
+            for (var i = 0; i < allAudios.length; i++) {
+                if (!allAudios[i].paused) {
+                    allAudios[i].pause();
+                    allAudios[i].currentTime = 0; // Reset ke awal
+                }
+            }
+
+            // Putar audio yang dipilih
+            var audio = document.getElementById(id);
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>

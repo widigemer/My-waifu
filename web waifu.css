@@ -1,0 +1,187 @@
+/* Reset style awal browser untuk memastikan semuanya dimulai dengan kondisi yang sama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Atur background seluruh website */
+body {
+  background-image: url('https://cdn.discordapp.com/attachments/1278265767921582142/1298696657013051432/921b3f5603a314fbedc610dd450ee178.jpg?ex=671a8103&is=67192f83&hm=1229e0a76110bc5825a091f1ab60063a0249d95f678f0762738a8aab6d39c62f&');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+/* Atur style header */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Atur style section */
+section {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+rainbow-text {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Atur style gambar waifu dan loli */
+gambar-container {
+    display: flex;
+  flex-wrap: warp;
+  gap: 20px;
+    justify-content: center; /* Pusatkan gambar di dalam kontainer */
+    margin-top: 20px;
+}
+
+gambar {
+    text-align: center;
+  cursor: pointer;
+  transition: transform 0,2s;
+    margin: 10px; /* Jarak antar gambar */
+}
+
+gambar img {
+  width: 50px;
+    height: 50%;
+  
+}
+gambar:hover {
+  transform: scale(1.1);
+  
+}
+
+/* Atur style tombol WhatsApp */
+whatsapp-button {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+whatsapp-button:hover {
+  background-color: #20b358;
+}
+
+/* Atur style footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+img {
+    width: 200px;
+    height: auto; /* Tinggi akan menyesuaikan secara otomatis berdasarkan aspek rasio */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.video-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+footer {
+    margin-top: 40px;
+    color: #777;
+}
+
+.small-img {
+    width: 50%; /* Sesuaikan persentasenya sesuai kebutuhan */
+    max-width: 300px; /* Atau atur maksimal lebar yang kamu inginkan */
+    height: auto; /* Agar aspek rasio tetap terjaga */
+}
+
+img {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Atur style kontainer video */
+.video-container {
+    display: flex;
+    justify-content: center; /* Pusatkan video di dalam kontainer */
+    margin-top: 20px; /* Jarak atas kontainer video */
+}
+
+/* Atur ukuran video */
+video {
+    width: 100%; /* Lebar video 100% dari kontainer */
+    max-width: 600px; /* Maksimal lebar video */
+    height: auto; /* Tinggi akan menyesuaikan secara otomatis berdasarkan aspek rasio */
+    border-radius: 5px; /* Sudut video membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan pada video */
+}
+
+/* Atur style tombol play dan kontrol video */
+video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5); /* Background kontrol video */
+    border-radius: 5px; /* Sudut kontrol video membulat */
+}
+
+video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7); /* Panel kontrol video */
+}
+
+background-image: url('gambar1.jpg');
+
